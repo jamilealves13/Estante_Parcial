@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream_bg"
+    android:orientation="vertical"
+    tools:context=".LivroDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/screen_padding_horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_voltar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circle_outline"
+            android:contentDescription="@string/detalhe_voltar_content_desc"
+            android:padding="10dp"
+            android:src="@drawable/chevron_backward_24px" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/btn_editar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/figtree_semibold"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:text="@string/detalhe_editar"
+            android:textColor="@color/primary"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/detalhe_capa"
+        android:layout_width="@dimen/book_cover_width_large"
+        android:layout_height="@dimen/book_cover_height_large"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/book_cover_shape_large"
+        android:backgroundTint="@color/spine_maroon"
+        tools:backgroundTint="@color/spine_maroon">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="20dp"
+            android:alpha="0.5"
+            android:background="@color/on_primary" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginBottom="20dp"
+            android:alpha="0.5"
+            android:background="@color/on_primary" />
+
+        <TextView
+            android:id="@+id/detalhe_iniciais"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|start"
+            android:fontFamily="@font/newsreader"
+            android:paddingHorizontal="20dp"
+            android:textColor="@color/on_primary"
+            android:textSize="22sp"
+            tools:text="CA" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/detalhe_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/newsreader"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/screen_padding_horizontal"
+        android:textColor="@color/text_primary"
+        android:textSize="22sp"
+        tools:text="Cem Anos de Solidão" />
+
+    <TextView
+        android:id="@+id/detalhe_autor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/figtree"
+        android:gravity="center"
+        android:textColor="@color/text_tertiary"
+        android:textSize="13sp"
+        tools:text="Gabriel García Márquez" />
+
+    <LinearLayout
+        android:id="@+id/detalhe_tag_fundo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/tag_bg_tan"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="5dp">
+
+        <TextView
+            android:id="@+id/detalhe_tag_texto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/figtree"
+            android:textColor="@color/tag_tan_text"
+            android:textSize="12sp"
+            tools:text="Realismo Mágico" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/detalhe_estrelas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/star_gold"
+        android:textSize="20sp"
+        tools:text="★★★★★" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/figtree"
+        android:text="@string/detalhe_favorito_da_estante"
+        android:textColor="@color/text_tertiary"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/screen_padding_horizontal"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/stat_card_background"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="14dp">
+
+            <TextView
+                android:id="@+id/detalhe_stat_decada_valor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/newsreader"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                tools:text="1960s" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/figtree"
+                android:text="@string/detalhe_label_decada"
+                android:textColor="@color/text_tertiary"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="0dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/stat_card_background"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="14dp">
+
+            <TextView
+                android:id="@+id/detalhe_stat_paginas_valor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/newsreader"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                tools:text="432" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/figtree"
+                android:text="@string/detalhe_label_paginas"
+                android:textColor="@color/text_tertiary"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="0dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/stat_card_background"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="14dp">
+
+            <TextView
+                android:id="@+id/detalhe_stat_status_valor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/newsreader"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                tools:text="Lido" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/figtree"
+                android:text="@string/detalhe_label_status"
+                android:textColor="@color/text_tertiary"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_buscar_parecidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/screen_padding_horizontal"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/primary"
+        android:fontFamily="@font/figtree_semibold"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingVertical="14dp"
+        android:text="@string/detalhe_buscar_parecidos"
+        android:textAllCaps="false"
+        android:textColor="@color/on_primary"
+        app:cornerRadius="@dimen/pill_radius"
+        app:icon="@drawable/ic_bookmark_24px"
+        app:iconGravity="textStart"
+        app:iconTint="@color/on_primary" />
+
+</LinearLayout>

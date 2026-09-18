@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base -->
+    <color name="cream_bg">#F0EEE6</color>
+    <color name="cream_bg_alt">#F1E9DD</color>
+    <color name="surface">#FFFDFA</color>
+    <color name="surface_soft">#FAF6F0</color>
+
+    <!-- Marca -->
+    <color name="primary">#6B2B3C</color>
+    <color name="on_primary">#FDF8F1</color>
+
+    <!-- Texto -->
+    <color name="text_primary">#2E2420</color>
+    <color name="text_secondary">#5A4A42</color>
+    <color name="text_tertiary">#7A6A5F</color>
+
+    <!-- Bordas -->
+    <color name="border_subtle">#242E2420</color>
+    <color name="border_input">#292E2420</color>
+
+    <!-- Sálvia (usada na década selecionada) -->
+    <color name="sage">#8A9A5B</color>
+    <color name="sage_dark">#20260F</color>
+
+    <!-- Tags de gênero -->
+    <color name="tag_scifi_bg">#E6EBDD</color>
+    <color name="tag_scifi_text">#4A5A33</color>
+    <color name="tag_tan_bg">#F5E7D3</color>
+    <color name="tag_tan_text">#7A5A25</color>
+    <color name="tag_gray_bg">#E4E5E9</color>
+    <color name="tag_gray_text">#3D4451</color>
+
+    <!-- Estrelas -->
+    <color name="star_gold">#C9A96E</color>
+
+    <!-- Lombadas dos livros -->
+    <color name="spine_brown">#7C4A2A</color>
+    <color name="spine_maroon">#6B2B3C</color>
+    <color name="spine_navy">#3D4A52</color>
+    <color name="spine_brick">#8A3B2E</color>
+    <color name="spine_olive">#6E6242</color>
+    <color name="spine_purple">#54465C</color>
+</resources>

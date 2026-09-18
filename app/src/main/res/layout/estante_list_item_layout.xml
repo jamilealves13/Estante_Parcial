@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/card_margin_bottom"
+    android:background="@drawable/card_background"
+    android:elevation="2dp"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/card_padding_horizontal"
+    android:paddingVertical="@dimen/card_padding_vertical">
+
+    <FrameLayout
+        android:id="@+id/livro_capa"
+        android:layout_width="@dimen/book_cover_width_small"
+        android:layout_height="@dimen/book_cover_height_small"
+        android:background="@drawable/book_cover_shape_small"
+        android:backgroundTint="@color/spine_maroon"
+        tools:backgroundTint="@color/spine_maroon">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="8dp"
+            android:alpha="0.5"
+            android:background="@color/on_primary" />
+
+        <TextView
+            android:id="@+id/livro_iniciais"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:padding="8dp"
+            android:fontFamily="@font/figtree_semibold"
+            android:textColor="@color/on_primary"
+            android:textSize="13sp"
+            tools:text="CA" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="14dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/livro_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/newsreader"
+            android:maxLines="2"
+            android:textColor="@color/text_primary"
+            android:textSize="17sp"
+            tools:text="Cem Anos de Solidão" />
+
+        <TextView
+            android:id="@+id/livro_autor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/figtree"
+            android:maxLines="1"
+            android:textColor="@color/text_tertiary"
+            android:textSize="12sp"
+            tools:text="Gabriel García Márquez" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/livro_tag_fundo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tag_bg_sage"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp">
+
+                <TextView
+                    android:id="@+id/livro_tag_texto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/figtree"
+                    android:textColor="@color/tag_scifi_text"
+                    android:textSize="11sp"
+                    tools:text="Ficção Científica" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/livro_nota"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/star_gold"
+                android:textSize="13sp"
+                tools:text="★★★★★" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Estante Parcial</string>
+    <!-- Minha Estante -->
+    <string name="estante_titulo">Minha Estante</string>
+    <string name="estante_busca_content_desc">Buscar na estante</string>
+    <string name="estante_filtro_lidos">Lidos</string>
+    <string name="estante_filtro_quero_ler">Quero Ler</string>
+    <string name="estante_novo_livro">Livro</string>
+    <string name="estante_novo_livro_content_desc">Adicionar novo livro</string>
+
+    <!-- Detalhe do livro -->
+    <string name="detalhe_voltar_content_desc">Voltar</string>
+    <string name="detalhe_editar">Editar</string>
+    <string name="detalhe_capa_content_desc">Capa do livro</string>
+    <string name="detalhe_favorito_da_estante">Favorito da estante</string>
+    <string name="detalhe_label_decada">Década</string>
+    <string name="detalhe_label_paginas">Páginas</string>
+    <string name="detalhe_label_status">Status</string>
+    <string name="detalhe_buscar_parecidos">Buscar livros parecidos</string>
+</resources>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream_bg"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/screen_padding_horizontal"
+    tools:context=".EstanteActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/newsreader"
+                android:text="@string/estante_titulo"
+                android:textColor="@color/text_primary"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/estante_resumo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/figtree"
+                android:textColor="@color/text_tertiary"
+                android:textSize="12sp"
+                tools:text="6 lidos · 6 na fila" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_busca"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circle_outline"
+            android:contentDescription="@string/estante_busca_content_desc"
+            android:padding="10dp"
+            android:src="@drawable/ic_search_24px" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/filtro_lidos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/pill_solid_primary"
+            android:fontFamily="@font/figtree_semibold"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:text="@string/estante_filtro_lidos"
+            android:textColor="@color/on_primary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/filtro_quero_ler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pill_outline"
+            android:fontFamily="@font/figtree"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:text="@string/estante_filtro_quero_ler"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="14dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/lista_livros"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="84dp"
+            tools:itemCount="6"
+            tools:listitem="@layout/estante_list_item_layout" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fab_novo_livro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/primary"
+            android:contentDescription="@string/estante_novo_livro_content_desc"
+            android:fontFamily="@font/figtree_semibold"
+            android:text="@string/estante_novo_livro"
+            android:textColor="@color/on_primary"
+            app:icon="@drawable/ic_add_24px"
+            app:iconTint="@color/on_primary" />
+    </FrameLayout>
+
+</LinearLayout>
